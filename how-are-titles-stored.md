@@ -48,7 +48,7 @@ Games are stored roughly like so using Metroid Prime (2002) as an example:
 
 {
   "name": "Metroid Prime"
-  "released": "2002-11-18" // First release date whether platform or regional
+  "released": "2002-11-18",
   "platforms": [
     "Gamecube",
     "Wii"
@@ -93,7 +93,7 @@ Pros:
 Cons:
 
   - For the model that the site would be using, it's a bit redundant listing the name with each entry. It makes total sense for localised names (primarily Japan) but I don't feel I would have an accurate enough source. As a Westerner, I would struggle to find a list of upcoming Japanese titles (that aren't just releases of Western titles) and have enough context to know if the dates are accurate or how to search for a better copy of the cover art
+  - The "overview" release date shown is simply the first release date (United States on the Gamecube in this case) which can be confusing without it being outright stated and has a bias towards the United States by default.
   - Each "release" is essentially just every possible combination of region and platform and is probably just reflecting every possible SKU which I feel wouldn't be the most efficient way of storing all this information. I also won't be storing variations like "Player's Choice" which that style is more suited towards.
   - Most of this information will realistically be discarded by an end user. I imagine a user would be prompted to choose their region (or it would be inferred from their timezone) and as such, any releases in Japan or the US won't be visible in the first place.
 
-  
