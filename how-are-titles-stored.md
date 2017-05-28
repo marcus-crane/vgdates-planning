@@ -47,7 +47,7 @@ Games are stored roughly like so using Metroid Prime (2002) as an example:
 // It is not an excerpt from the Giant Bomb API
 
 {
-  "name": "Metroid Prime"
+  "name": "Metroid Prime",
   "released": "2002-11-18",
   "platforms": [
     "Gamecube",
