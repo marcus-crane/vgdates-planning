@@ -97,3 +97,60 @@ Cons:
   - Each "release" is essentially just every possible combination of region and platform and is probably just reflecting every possible SKU which I feel wouldn't be the most efficient way of storing all this information. I also won't be storing variations like "Player's Choice" which that style is more suited towards.
   - Most of this information will realistically be discarded by an end user. I imagine a user would be prompted to choose their region (or it would be inferred from their timezone) and as such, any releases in Japan or the US won't be visible in the first place.
 
+## Proposed JSON formats
+
+Here are some examples of how I could model information for a game.
+
+* Store each platform/date combination as an object within a regional array:
+
+```json
+{
+  "name": "Grand Theft Auto V"
+  "releases": [{
+    "US": [{
+      "platform": "PS3",
+      "date": "2013-09-17"
+    },
+    {
+      "platform": "X360",
+      "date": "2013-09-17"
+    },
+    {
+      "platform": "PS4",
+      "date": "2014-11-18"
+    },
+    {
+      "platform": "XONE",
+      "date": "2014-11-18"
+    }
+    {
+      "platform": "PC",
+      "date": "2015-04-14"
+    }],
+    "EU": [{
+      "platform": "PS3",
+      "date": "2013-09-17"
+    },
+    {
+      "platform": "X360",
+      "date": "2013-09-17"
+    },
+    {
+      "platform": "PS4",
+      "date": "2014-11-18"
+    },
+    {
+      "platform": "XONE",
+      "date": "2014-11-18"
+    }
+    {
+      "platform": "PC",
+      "date": "2015-04-14"
+    }] 
+  }]
+}
+```
+
+This format works for the most part and matches how a user will view the site. An EU user will only want dates relevant to their region.
+
+In the above case, all the dates are identical however and as we move more and more towards digital, this will become the case where there's a lot of duplicated information.
