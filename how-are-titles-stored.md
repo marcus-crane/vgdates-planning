@@ -105,7 +105,7 @@ Here are some examples of how I could model information for a game.
 
 ```json
 {
-  "name": "Grand Theft Auto V"
+  "name": "Grand Theft Auto V",
   "releases": [{
     "US": [{
       "platform": "PS3",
